@@ -29,10 +29,10 @@ jobs:
         source: "templates,assets,main"
         target: /home/${{ secrets.EC2_USERNAME }}
 
-    # - name: Restart service
-    #   uses: appleboy/ssh-action@v1.0.3
-    #   with:
-    #     host: ${{ secrets.EC2_HOST }}
-    #     username: ${{ secrets.EC2_USERNAME }}
-    #     key: ${{ secrets.EC2_SECRET_KEY }}
-    #     script: sudo systemctl restart projeto
+    - name: Restart service
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.EC2_SECRET_KEY }}
+        script: sudo systemctl restart projeto
