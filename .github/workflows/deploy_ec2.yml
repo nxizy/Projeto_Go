@@ -2,9 +2,7 @@ name: "Entrega Contínua EC2"
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ "deploy_ec2" ]
 
 jobs:
                                                                                                                                                                                                                                                                                                                                           

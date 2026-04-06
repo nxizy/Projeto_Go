@@ -17,11 +17,11 @@ jobs:
       - name: Docker login
         uses: docker/login-action@v3
         with:
-          username: cviniciussdias
+          username: nxizy
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       - name: Constrói e envia imagem docker
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: cviniciussdias/projeto_go:latest,cviniciussdias/projeto_go:${{ github.sha }}
+          tags: nxizy/projeto_go:latest,nxizy/projeto_go:${{ github.sha }}
